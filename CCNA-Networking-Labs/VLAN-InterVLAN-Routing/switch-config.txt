@@ -1,0 +1,25 @@
+Switch Configuration
+
+enable
+configure terminal
+
+vlan 10
+name HR
+
+vlan 20
+name SALES
+
+vlan 30
+name IT
+
+interface range fa0/2-10
+switchport mode access
+
+interface fa0/2-4
+switchport access vlan 10
+
+interface fa0/5-7
+switchport access vlan 20
+
+interface fa0/8-10
+switchport access vlan 30
